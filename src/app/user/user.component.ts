@@ -1,4 +1,4 @@
-import { Component, Input, computed, input} from '@angular/core';
+import { Component, input, Input, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -10,14 +10,22 @@ import { Component, Input, computed, input} from '@angular/core';
 })
 export class UserComponent {
   // Added @Input properties `avatar` and `name` with `required: true` to ensure that these inputs are provided by the parent component.
+  @Input({ required : true }) id !: string;
   @Input({ required : true }) avatar !: string;
   @Input({ required : true }) name !: string;
+  @Output() select = new EventEmitter();
   //Created a computed property `imagePath` to dynamically generate the path for the user's avatar based on the `avatar` input.
   get imagePath() {  
     return './users/' + this.avatar;
   }
   onSelectUser() {
+    this.select.emit(this.id);
   }
+  
+  
+  
+  
+  
   //custom Events!
 
 
