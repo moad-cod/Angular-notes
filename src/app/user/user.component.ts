@@ -1,5 +1,16 @@
-import { Component, input, Input, Output, EventEmitter} from '@angular/core';
+import { Component, input, Input, Output, EventEmitter, output} from '@angular/core';
 
+// type User = {
+//   id : string;
+//   name : string;
+//   avatar : string;
+// }
+
+interface User {
+  id : string;
+  name : string;
+  avatar : string;
+} 
 
 @Component({
   selector: 'app-user',
@@ -9,17 +20,38 @@ import { Component, input, Input, Output, EventEmitter} from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+
+  @Input({required:true}) user!:User;
+  @Output() select = new EventEmitter<string>();
+
+
+
+
+  // @Input({required:true}) user!: {
+  //   id : string;
+  //   name : string;
+  //   avatar : string;
+  // };
+
+
+
   // Added @Input properties `avatar` and `name` with `required: true` to ensure that these inputs are provided by the parent component.
-  @Input({ required : true }) id !: string;
-  @Input({ required : true }) avatar !: string;
-  @Input({ required : true }) name !: string;
-  @Output() select = new EventEmitter();
+  // @Input({ required : true }) id !: string;
+  // @Input({ required : true }) avatar !: string;
+  // @Input({ required : true }) name !: string;
+  
+  // Traditional @Output() with EventEmitter():
+  // @Output() select = new EventEmitter<string>();
+  
+  // output<string>() with Signals API (New Approach):
+  // select = output<string>();
+
   //Created a computed property `imagePath` to dynamically generate the path for the user's avatar based on the `avatar` input.
   get imagePath() {  
-    return './users/' + this.avatar;
+    return './users/' + this.user.avatar;
   }
   onSelectUser() {
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
   
   

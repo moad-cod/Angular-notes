@@ -15,3 +15,9 @@ In Angular, data flows down from parent to child components via @Input(). But if
 (e.g., a user clicked a button), the data flows upward using custom events.
 Custom events allow a child component to notify the parent of something that happened, like user interaction or data updates.
 This is achieved using Angular’s @Output() decorator with EventEmitter, which emits a custom event that the parent component listens for.
+
+//What is EventEmitter:
+EventEmitter is a class provided by Angular that allows emitting custom events.
+It is typically used with @Output() to create custom events in child components.
+By using EventEmitter, you can trigger custom events in your child component,
+and the parent component can subscribe to and react to those events.
