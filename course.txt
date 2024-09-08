@@ -1,7 +1,9 @@
 
 //what is signals and why we used them in angular:
-In Angular, signals are a new reactive primitive introduced to simplify and enhance reactivity, which is essential in modern web applications.
-Signals help manage state and reactive updates more efficiently by tracking dependencies and automatically triggering updates when data changes.
+In Angular, signals are a new reactive primitive introduced to simplify and enhance reactivity,
+which is essential in modern web applications.
+Signals help manage state and reactive updates more efficiently by tracking dependencies and 
+automatically triggering updates when data changes.
 
 //why we need a input()in angular:
 The @Input() decorator in Angular is crucial for enabling parent-to-child component communication.
