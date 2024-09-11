@@ -24,4 +24,6 @@ It is typically used with @Output() to create custom events in child components.
 By using EventEmitter, you can trigger custom events in your child component,
 and the parent component can subscribe to and react to those events.
 
+In Angular, the @Injectable() decorator is used to define a service or class that can be injected into
+other components or services using Angular's Dependency Injection (DI) system.
 
