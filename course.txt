@@ -26,4 +26,5 @@ and the parent component can subscribe to and react to those events.
 
 In Angular, the @Injectable() decorator is used to define a service or class that can be injected into
 other components or services using Angular's Dependency Injection (DI) system.
-
+ 
+ 
