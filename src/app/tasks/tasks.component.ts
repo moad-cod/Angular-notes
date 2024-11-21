@@ -14,19 +14,19 @@ import { TasksService } from './tasks.service';
 })
 export class TasksComponent {
   @Input({required:true}) userId!:string;
-  @Input({required: true}) name!: string | undefined;
+  @Input({required: true}) name!:string | undefined;
   isAddingTask = false;
   // Dependency injection
   constructor( private tasksService: TasksService) {}
-  
+
   //instantiate service
   // private taskService = new TaskService();
-  
+
 
   get selectedUserTasks() {
     return this.tasksService.getUserTasks(this.userId);
   }
-  
+
   onStartAddTask() {
     this.isAddingTask = true;
   }

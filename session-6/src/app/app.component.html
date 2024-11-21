@@ -1,23 +1,26 @@
 <app-header></app-header>
 <main>
   <div id="dashboard">
-  <!-- Property Binding: Repetition -->
-  <app-dashboard-item [image]="{src: 'status.png', alt: 'A signal symbol'}"
-    title="A sing symbol"
+    <!-- Property Binding: Repetition -->
+    <app-dashboard-item
+      [image]="{ src: 'status.png', alt: 'A signal symbol' }"
+      title="A sing symbol"
     >
       <app-server-status></app-server-status>
     </app-dashboard-item>
 
-    <app-dashboard-item [image]="{src: 'globe.png', alt: 'A globe'}"
-    title="A globe"
+    <app-dashboard-item
+      [image]="{ src: 'globe.png', alt: 'A globe' }"
+      title="A globe"
     >
       <app-traffic></app-traffic>
     </app-dashboard-item>
 
-    <app-dashboard-item [image]="{src: 'list.png', alt: 'A list of items'}"
-    title="Support Tick"
+    <app-dashboard-item
+      [image]="{ src: 'list.png', alt: 'A list of items' }"
+      title="Support Tick"
     >
-      <app-teckets></app-teckets>
+      <app-tickets></app-tickets>
     </app-dashboard-item>
   </div>
 </main>

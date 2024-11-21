@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { ServerStatusComponent } from "../dashboard/server-status/server-status.component";
-import { TrafficComponent } from "../dashboard/traffic/traffic.component";
-import { TecketsComponent } from "../dashboard/teckets/teckets.component";
+import { ButtonComponent } from "../shared/button/button.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
